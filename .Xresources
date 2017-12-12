@@ -6,6 +6,12 @@
 ! Leave them as they are if a file ~/.extend.Xresources is being used on your system.
 ! config can be added there or also here below.
 ! For comments use "!"
+! OLD XTERM DEFAULTS
+!XTerm*background: #2b2b2b
+!XTerm*foreground: #e7e7e7
+!XTerm*pointerColor: #16A085
+!XTerm*faceName: Fixed
+!XTerm*faceSize: 11
 
 Xft.dpi: 96
 Xft.antialias: true
@@ -15,8 +21,4 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background: #2b2b2b
-XTerm*foreground: #e7e7e7
-XTerm*pointerColor: #16A085
-XTerm*faceName: Fixed
-XTerm*faceSize: 11
+XTerm*color0:#101010
