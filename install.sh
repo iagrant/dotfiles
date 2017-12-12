@@ -26,13 +26,6 @@ echo Vim Fugitive
 git clone https://github.com/tpope/vim-fugitive.git
 echo Vim Ruhbarb
 git clone https://github.com/tpope/vim-rhubarb.git
-cd ~
-echo Installing Powerline Fonts
-git clone https://github.com/powerline/fonts.git
-cd fonts
-./install.sh
-cd ..
-rm -rf fonts
 echo YouCompleteMe
 git clone https://github.com/Valloric/YouCompleteMe.git
 cd ~/.vim/bundle/YouCompleteMe
@@ -43,3 +36,11 @@ git submodule update --init --recursive
 #mkdir ycm_build
 #cd ycm_build
 #cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+cd ~
+echo Installing Powerline Fonts
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+
