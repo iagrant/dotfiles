@@ -20,10 +20,12 @@
 $
 
 # Command Line History (newest to oldest):
-:q
-|2,0,1513036358,,"q"
 :w
-|2,0,1513034047,,"w"
+|2,0,1513048948,,"w"
+:q
+|2,0,1513048439,,"q"
+:w install.sh
+|2,0,1513048437,,"w install.sh"
 :W
 |2,0,1512814456,,"W"
 :tabe .
@@ -118,8 +120,6 @@ $
 |2,0,1512519638,,"%s/b_size/MAXBOARDSIZE/g"
 :Gwrit
 |2,0,1512508093,,"Gwrit"
-:Gcommit -m "Deleted moveNum from String Gen"
-|2,0,1512507614,,"Gcommit -m \"Deleted moveNum from String Gen\""
 
 # Search String History (newest to oldest):
 ? @$
@@ -233,10 +233,13 @@ $
 "0	LINE	0
 	        for (int i=0; i < s.length; i++)
 |3,0,0,1,1,0,1512816443,"        for (int i=0; i < s.length; i++)"
-""1	LINE	0
+"1	LINE	0
 	
-|3,1,1,1,1,0,1512816977,""
-"2	CHAR	0
+|3,0,1,1,1,0,1513048899,""
+"2	LINE	0
+	
+|3,0,2,1,1,0,1512816977,""
+"3	CHAR	0
 	    /**
 	     * String to Board Fuctinon
 	     * String to Board convertor takes in a string and makes 
@@ -260,41 +263,26 @@ $
 	            return a1*11+a2;
 	        } 
 	    }
-|3,0,2,0,23,0,1512816976,"    /**","     * String to Board Fuctinon","     * String to Board convertor takes in a string and makes ","     * @pre the string is not made into  a baord","     * @post the stringboard is made into baodrd","     */","    int stringToBoard(string s)","    {","        int c = 0;","        for (int i=0; i < s.length; i++)","        {","            for (int j=0; i < s.length; j++)","            {","                lot[i][j] = s[c];",>22
+|3,0,3,0,23,0,1512816976,"    /**","     * String to Board Fuctinon","     * String to Board convertor takes in a string and makes ","     * @pre the string is not made into  a baord","     * @post the stringboard is made into baodrd","     */","    int stringToBoard(string s)","    {","        int c = 0;","        for (int i=0; i < s.length; i++)","        {","            for (int j=0; i < s.length; j++)","            {","                lot[i][j] = s[c];",>22
 |<"                c++;","            }","        }","        int a1=5,a2=2;","        if (move_num==118/2)","        {","            return a1*11+a2;","        } ","    }"
-"3	LINE	0
-	        } 
-|3,0,3,1,1,0,1512815445,"        } "
 "4	LINE	0
-	        {
-|3,0,4,1,1,0,1512815444,"        {"
+	        } 
+|3,0,4,1,1,0,1512815445,"        } "
 "5	LINE	0
-	        if (move_num==118/2)
-|3,0,5,1,1,0,1512815444,"        if (move_num==118/2)"
+	        {
+|3,0,5,1,1,0,1512815444,"        {"
 "6	LINE	0
-	
-|3,0,6,1,1,0,1512792523,""
+	        if (move_num==118/2)
+|3,0,6,1,1,0,1512815444,"        if (move_num==118/2)"
 "7	LINE	0
-	        initBoard();
-|3,0,7,1,1,0,1512791527,"        initBoard();"
+	
+|3,0,7,1,1,0,1512792523,""
 "8	LINE	0
+	        initBoard();
+|3,0,8,1,1,0,1512791527,"        initBoard();"
+"9	LINE	0
 	        
-|3,0,8,1,1,0,1512790682,"        "
-"9	CHAR	0
-	        traffic.readInput(car_num);
-	        traffic.printBoard();
-	        board_queue.push(board);
-	        temp = board_queue.front();
-	        board_queue.pop();
-	        /// Print final message.
-	        //cout << "Scenario " << scenario << " requires " << moves << " moves" << endl;
-	        /** Once the number of moves is posted, increment the scenario variable to
-	          indicate the end of the scenario. */
-	        //scenario++;
-	        //cin >> car_num;
-	    //
-|3,0,9,0,12,0,1512790075,"        traffic.readInput(car_num);","        traffic.printBoard();","        board_queue.push(board);","        temp = board_queue.front();","        board_queue.pop();","        /// Print final message.","        //cout << \"Scenario \" << scenario << \" requires \" << moves << \" moves\" << endl;","        /** Once the number of moves is posted, increment the scenario variable to","          indicate the end of the scenario. */",>23
-|<"        //scenario++;","        //cin >> car_num;","    //"
+|3,0,9,1,1,0,1512790682,"        "
 "a	CHAR	0
 	aq€kb
 |3,0,10,0,1,0,1507713650,"aq€kb"
@@ -316,43 +304,169 @@ $
 "k	CHAR	0
 	kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjoboa	.prin	();;wu:w:!€ku€ku:!€ku€ku
 |3,0,20,0,1,0,1512531258,"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjoboa	.prin	();;wu:w:!€ku€ku:!€ku€ku"
-"-	CHAR	0
-	i
-|3,0,36,0,1,0,1512816478,"i"
+""-	CHAR	0
+	cpp
+|3,1,36,0,1,0,1513048945,"cpp"
 
 # File marks:
-'0  1  0  ~/.ocamlinit
-|4,48,1,0,1513036358,"~/.ocamlinit"
-'1  37  0  ~/.bashrc
-|4,49,37,0,1513036272,"~/.bashrc"
-'2  10  23  ~/.ocamlinit
-|4,50,10,23,1513034048,"~/.ocamlinit"
-'3  10  23  ~/.ocamlinit
-|4,51,10,23,1513034048,"~/.ocamlinit"
-'4  6  0  ~/.ocamlinit
-|4,52,6,0,1513031674,"~/.ocamlinit"
-'5  6  0  ~/.ocamlinit
-|4,53,6,0,1513031674,"~/.ocamlinit"
-'6  6  0  ~/.ocamlinit
-|4,54,6,0,1513031674,"~/.ocamlinit"
-'7  6  0  ~/.ocamlinit
-|4,55,6,0,1513031674,"~/.ocamlinit"
-'8  43  21  ~/.bashrc
-|4,56,43,21,1513031649,"~/.bashrc"
-'9  43  21  ~/.bashrc
-|4,57,43,21,1513031649,"~/.bashrc"
+'0  42  24  ~/install.sh
+|4,48,42,24,1513048960,"~/install.sh"
+'1  43  75  ~/installVim
+|4,49,43,75,1513048439,"~/installVim"
+'2  37  54  ~/installVim
+|4,50,37,54,1513039922,"~/installVim"
+'3  37  54  ~/installVim
+|4,51,37,54,1513039922,"~/installVim"
+'4  1  0  ~/.ocamlinit
+|4,52,1,0,1513036358,"~/.ocamlinit"
+'5  37  0  ~/.bashrc
+|4,53,37,0,1513036272,"~/.bashrc"
+'6  10  23  ~/.ocamlinit
+|4,54,10,23,1513034048,"~/.ocamlinit"
+'7  10  23  ~/.ocamlinit
+|4,55,10,23,1513034048,"~/.ocamlinit"
+'8  6  0  ~/.ocamlinit
+|4,56,6,0,1513031674,"~/.ocamlinit"
+'9  6  0  ~/.ocamlinit
+|4,57,6,0,1513031674,"~/.ocamlinit"
 
 # Jumplist (newest first):
+-'  42  24  ~/install.sh
+|4,39,42,24,1513048960,"~/install.sh"
+-'  1  0  ~/install.sh
+|4,39,1,0,1513048504,"~/install.sh"
+-'  43  75  ~/installVim
+|4,39,43,75,1513048439,"~/installVim"
+-'  43  75  ~/installVim
+|4,39,43,75,1513048439,"~/installVim"
+-'  2  0  ~/installVim
+|4,39,2,0,1513048003,"~/installVim"
+-'  2  0  ~/installVim
+|4,39,2,0,1513048003,"~/installVim"
+-'  1  0  ~/installVim
+|4,39,1,0,1513040032,"~/installVim"
+-'  1  0  ~/installVim
+|4,39,1,0,1513040032,"~/installVim"
+-'  37  54  ~/installVim
+|4,39,37,54,1513039922,"~/installVim"
+-'  37  54  ~/installVim
+|4,39,37,54,1513039922,"~/installVim"
+-'  37  54  ~/installVim
+|4,39,37,54,1513039922,"~/installVim"
+-'  37  54  ~/installVim
+|4,39,37,54,1513039922,"~/installVim"
+-'  1  0  ~/installVim
+|4,39,1,0,1513039916,"~/installVim"
+-'  1  0  ~/installVim
+|4,39,1,0,1513039916,"~/installVim"
+-'  1  0  ~/.ocamlinit
+|4,39,1,0,1513036358,"~/.ocamlinit"
+-'  1  0  ~/.ocamlinit
+|4,39,1,0,1513036358,"~/.ocamlinit"
+-'  1  0  ~/.ocamlinit
+|4,39,1,0,1513036358,"~/.ocamlinit"
+-'  1  0  ~/.ocamlinit
+|4,39,1,0,1513036358,"~/.ocamlinit"
+-'  1  0  ~/.ocamlinit
+|4,39,1,0,1513036358,"~/.ocamlinit"
+-'  1  0  ~/.ocamlinit
+|4,39,1,0,1513036358,"~/.ocamlinit"
+-'  1  0  ~/.ocamlinit
+|4,39,1,0,1513036358,"~/.ocamlinit"
 -'  1  0  ~/.ocamlinit
 |4,39,1,0,1513036358,"~/.ocamlinit"
 -'  37  0  ~/.bashrc
 |4,39,37,0,1513036272,"~/.bashrc"
 -'  37  0  ~/.bashrc
 |4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
+-'  37  0  ~/.bashrc
+|4,39,37,0,1513036272,"~/.bashrc"
 -'  43  0  ~/.bashrc
 |4,39,43,0,1513036264,"~/.bashrc"
 -'  43  0  ~/.bashrc
 |4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  43  0  ~/.bashrc
+|4,39,43,0,1513036264,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1513036260,"~/.bashrc"
 -'  1  0  ~/.bashrc
 |4,39,1,0,1513036260,"~/.bashrc"
 -'  1  0  ~/.bashrc
@@ -363,188 +477,87 @@ $
 |4,39,10,23,1513034048,"~/.ocamlinit"
 -'  10  23  ~/.ocamlinit
 |4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
+-'  10  23  ~/.ocamlinit
+|4,39,10,23,1513034048,"~/.ocamlinit"
 -'  1  0  ~/.ocamlinit
 |4,39,1,0,1513033997,"~/.ocamlinit"
 -'  1  0  ~/.ocamlinit
 |4,39,1,0,1513033997,"~/.ocamlinit"
--'  6  0  ~/.ocamlinit
-|4,39,6,0,1513031674,"~/.ocamlinit"
--'  6  0  ~/.ocamlinit
-|4,39,6,0,1513031674,"~/.ocamlinit"
--'  6  0  ~/.ocamlinit
-|4,39,6,0,1513031674,"~/.ocamlinit"
--'  6  0  ~/.ocamlinit
-|4,39,6,0,1513031674,"~/.ocamlinit"
--'  6  0  ~/.ocamlinit
-|4,39,6,0,1513031674,"~/.ocamlinit"
 -'  1  0  ~/.ocamlinit
-|4,39,1,0,1513031671,"~/.ocamlinit"
+|4,39,1,0,1513033997,"~/.ocamlinit"
 -'  1  0  ~/.ocamlinit
-|4,39,1,0,1513031671,"~/.ocamlinit"
--'  43  21  ~/.bashrc
-|4,39,43,21,1513031649,"~/.bashrc"
--'  43  21  ~/.bashrc
-|4,39,43,21,1513031649,"~/.bashrc"
--'  43  21  ~/.bashrc
-|4,39,43,21,1513031649,"~/.bashrc"
--'  43  21  ~/.bashrc
-|4,39,43,21,1513031649,"~/.bashrc"
--'  43  21  ~/.bashrc
-|4,39,43,21,1513031649,"~/.bashrc"
--'  43  21  ~/.bashrc
-|4,39,43,21,1513031649,"~/.bashrc"
--'  43  21  ~/.bashrc
-|4,39,43,21,1513031649,"~/.bashrc"
--'  43  21  ~/.bashrc
-|4,39,43,21,1513031649,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1513031621,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1513031621,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1513031621,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1513031621,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1513031621,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1513031621,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1513031621,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1513031621,"~/.bashrc"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  92  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,92,0,1512817020,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  17  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,17,0,1512815052,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
--'  1  0  ~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp
-|4,39,1,0,1512814317,"~/Downloads/PA11-Rush-Hour-BFS/RushHour.cpp"
+|4,39,1,0,1513033997,"~/.ocamlinit"
+-'  1  0  ~/.ocamlinit
+|4,39,1,0,1513033997,"~/.ocamlinit"
+-'  1  0  ~/.ocamlinit
+|4,39,1,0,1513033997,"~/.ocamlinit"
 
 # History of marks within files (newest to oldest):
+
+> ~/install.sh
+	*	1513048952	0
+	"	42	24
+	^	42	25
+	.	42	24
+	+	8	31
+	+	15	22
+	+	29	3
+	+	36	0
+	+	43	0
+	+	44	0
+	+	45	0
+	+	42	24
+
+> ~/installVim
+	*	1513048437	0
+	"	43	75
+	^	43	78
+	.	43	10
+	+	37	54
+	+	40	28
+	+	39	38
+	+	42	8
+	+	43	10
 
 > ~/.ocamlinit
 	*	1513036356	0
@@ -2382,21 +2395,3 @@ $
 > ~/Dropbox/SchoolShit/CS302/PA/PA08/show10.cpp
 	*	1509050746	0
 	"	1	0
-
-> ~/Dropbox/SchoolShit/CS302/PA/PA08/test10std.cpp
-	*	1509050743	0
-	"	81	8
-	.	34	0
-	+	34	0
-
-> ~/Dropbox/SchoolShit/CS302/PA/PA08/test10.cpp
-	*	1509042791	0
-	"	80	0
-	.	131	0
-	+	9	0
-	+	67	0
-	+	43	0
-	+	93	0
-	+	103	0
-	+	120	0
-	+	131	0
