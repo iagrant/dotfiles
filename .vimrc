@@ -1,11 +1,11 @@
-"colo and standard setup stuff
-colo elflord
-let g:airline_theme='dark'
+"------colo and standard setup stuff---------
+colo 1989
 set number
 set relativenumber
 syntax on
 filetype plugin indent on
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set wildmenu
 
 "a bunch of no ops
 inoremap <Up> <Nop>
@@ -31,7 +31,6 @@ set encoding=utf-8
 set t_Co=256
 set foldmethod=manual
 set scrolloff=90
-let g:Powerline_symbols = 'unicode'
 
 "vim splits yo
 nmap <silent> <c-k> :wincmd k<CR>
@@ -45,8 +44,13 @@ nnoremap <leader>sh :split $MYVIMRC<cr>
 nnoremap <leader>sr :source $MYVIMRC<cr>
 
 " air-line fix powerline
+let g:Powerline_symbols = 'unicode'
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-
+let g:airline_skip_empty_sections = 1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='dark'
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -77,5 +81,5 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.whitespace = ''
 
-"clears trailing whitespace
-autocmd BufWritePre :%s/\s+$//e
+"AUTOCMDS
+autocmd BufWritePre * %s/\s\+$//e
