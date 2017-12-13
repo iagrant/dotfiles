@@ -28,7 +28,7 @@ shopt -s checkwinsize
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm|xterm-color|*-256color) color_prompt=yes;;
+    gnome*|xterm|xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -73,7 +73,7 @@ unset color_prompt force_color_prompt
 #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h \w\a\]$PS1"
 case ${TERM} in
   xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
-    PS1="\[\e]0;${PROMPT_COMMAND:+$PROMPT_COMMAND}\u@\h \w\a\]$PS1"
+    PS1="\[\e]0;\u@\h \w\a\]$PS1"
     ;;
 *)
     ;;
@@ -137,12 +137,20 @@ colors() {
 [[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
+#IDK
 export PGHOST=localhost
+#PRETTY COLORS
 export TERM=xterm-256color
+#SYMBOLIC LINKS TO DIRS
 export CDPATH=~/symlinks
+#REPLACE NANO WITH VIM WHEN NEEDED
 export VISUAL=vim
 export EDITOR="$VISUAL"
+#OCAML STUFF
 export OCAMLPARAM="_,I=$OPAMROOT/system/lib/toplevel"
 eval 'opam config env'
+PS1=$'\[\033[97;45;104m\] \u \[\033[94;2;40m\]\xee\x82\xb0\[\033[30;2;107m\]\xee\x82\xb0\[\033[30;2;107m\] \W \[\033[97;2;49m\]\xee\x82\xb0\e[0m '
+clear
