@@ -154,5 +154,6 @@ export OCAMLPARAM="_,I=$OPAMROOT/system/lib/toplevel"
 eval 'opam config env'
 #BEAUTIFUL POWERLINE SEXYNESS
 #FIGURE OUT WHILE IF ABOVE DOESN'T WORK
-PS1=$'\[\e[90;1;102m\] \u \[\e[32;1;40m\]\xee\x82\xb0\[\e[30;1;107m\]\xee\x82\xb0\[\e[30;1;107m\] \W \[\e[97;1;49m\]\xee\x82\xb0\e[0m '
+PS1=$'\[\e[30;1;102m\]\xee\x82\xb0\[\e[30;1;102m\] \u \[\e[32;1;40m\]\xee\x82\xb0\[\e[30;1;107m\]\xee\x82\xb0\[\e[30;1;107m\] \W \[\e[97;1;49m\]\xee\x82\xb0\e[0m '
+unset color_prompt force_color_prompt
 clear
