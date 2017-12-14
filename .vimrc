@@ -1,5 +1,5 @@
 "------colo and standard setup stuff---------
-colo 1989
+"colo 1989
 set number
 set relativenumber
 syntax on

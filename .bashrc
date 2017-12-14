@@ -34,29 +34,29 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
+color_prompt=yes
 force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
 if [ "$color_prompt" = yes ]; then
     if [[ ${EUID} == 0 ]] ; then
+        echo hi
         PS1=$'\u2234\u2192\u263f\u2605'
     else
         #
         # MAGIC LINE FOR POWER LINE TERMINAL GOODNESS
         #
-        #uncomment to see if test to see if loop runs
-        #echo -e '\e[0;41m'
-        PS1=$'\[\033[97;2;104m\] \u \[\033[94;2;40m\]\xee\x82\xb0\[\033[30;2;107m\]\xee\x82\xb0\[\033[30;2;107m\] \W \[\033[97;2;49m\]\xee\x82\xb0\e[0m '
+        PS1=$'\[\e[255;1;104m\] \u \[\e[94;1;40m\]\xee\x82\xb0\[\e[30;2;107m\]\xee\x82\xb0\[\e[30;2;107m\] \w \[\e[97;2;49m\]\xee\x82\xb0\e[0m '
         #
         #
         #
@@ -64,16 +64,16 @@ if [ "$color_prompt" = yes ]; then
 
     fi
 else
-    PS1='${PROMPT_COMMAND:+($PROMPT_COMMAND)}\u@\h \w \$ '
+    PS1='\u@\h \w \$ '
 fi
 
-unset color_prompt force_color_prompt
+#unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h \w\a\]$PS1"
 case ${TERM} in
   xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
-    PS1="\[\e]0;\u@\h \w\a\]$PS1"
+      PS1="\[\e]0;\u@\h \w\a\]$PS1"
     ;;
 *)
     ;;
@@ -152,5 +152,7 @@ export EDITOR="$VISUAL"
 #OCAML STUFF
 export OCAMLPARAM="_,I=$OPAMROOT/system/lib/toplevel"
 eval 'opam config env'
-PS1=$'\[\033[97;45;104m\] \u \[\033[94;2;40m\]\xee\x82\xb0\[\033[30;2;107m\]\xee\x82\xb0\[\033[30;2;107m\] \W \[\033[97;2;49m\]\xee\x82\xb0\e[0m '
+#BEAUTIFUL POWERLINE SEXYNESS
+#FIGURE OUT WHILE IF ABOVE DOESN'T WORK
+PS1=$'\[\e[90;1;102m\] \u \[\e[32;1;40m\]\xee\x82\xb0\[\e[30;1;107m\]\xee\x82\xb0\[\e[30;1;107m\] \W \[\e[97;1;49m\]\xee\x82\xb0\e[0m '
 clear
