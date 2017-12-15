@@ -8,3 +8,6 @@ If it break shit it's your fault
  
  Link for How to Customize Shell Prompt
  https://misc.flogisoft.com/bash/tip_customize_the_shell_prompt
+ 
+ Just for Refrence in case +clipboard or +python are off
+ https://blog.dbrgn.ch/2012/10/23/recompile-vim-on-arch-linux/
