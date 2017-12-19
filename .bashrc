@@ -140,8 +140,8 @@ colors() {
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
-#IDK
-export PGHOST=localhost
+#AUTOJUMP
+source /etc/profile.d/autojump.bash
 #PRETTY COLORS
 export TERM=xterm-256color
 #SYMBOLIC LINKS TO DIRS
