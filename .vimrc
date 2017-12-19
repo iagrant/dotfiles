@@ -106,9 +106,7 @@ augroup END
 " }}}
 
 "-----------DISABLED KEYS----------------{{{
-inoremap <BS> <Nop>
 inoremap <Del> <Nop>
-nnoremap <BS> <Nop>
 nnoremap <Del> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
@@ -119,6 +117,7 @@ nnoremap <Right> <Nop>
 nnoremap <Down> <Nop>
 nnoremap <Up> <Nop>
 nnoremap <q> <Nop>
+inoremap <q> <Nop>
 "}}}
 
 " -----------CUSTOM PREFS-----------------{{{
