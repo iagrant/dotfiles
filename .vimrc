@@ -89,11 +89,6 @@ inoremap jk <Esc>
 nnoremap <leader>sv :vsplit $MYVIMRC<cr>
 nnoremap <leader>sh :split $MYVIMRC<cr>
 nnoremap <leader>sr :source $MYVIMRC<cr>
-"onoremap in( :<c-u>normal! f(vi(<cr>
-"onoremap il( :<c-u>normal! F)vi(<cr>
-"onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
-"Around heading
-"onoremap ah :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rg_vk0"<cr>
 set clipboard=unnamed
 "}}}
 
@@ -127,16 +122,7 @@ nnoremap <q> <Nop>
 "}}}
 
 " -----------CUSTOM PREFS-----------------{{{
-" When using vim-vinegar press '-' to search for a new file in tree.
-
-" When using vim-surround press 'cs' followed by the current surrounder and
-" then new surrounder.
-"
-" When using vim commentary use 'gc' to comment and 'gcgc' to uncomment
-"
-" My favorite theme finally
 colo vimbrant
-" :<Tab> will be useful now
 set wildmenu
 
 " Give me sane tabs
