@@ -11,3 +11,6 @@ If it break shit it's your fault
  
  Just for Refrence in case +clipboard or +python are off
  https://blog.dbrgn.ch/2012/10/23/recompile-vim-on-arch-linux/
+ 
+ Diehl's Vim and Haskell suggestions
+ http://www.stephendiehl.com/posts/vim_2016.html
