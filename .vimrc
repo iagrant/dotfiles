@@ -1,19 +1,13 @@
-" -----------VIMRC-----------{{{
+" -----------VIM HEADER-----------{{{
 "
-" ****Please use with caution this setup can lead to
-"       insanity.
-"
-" Author: Ian Grant
+" *Please use with cation this setup can lead to insanity.
+" --Ian Grant
 " }}}
 
 " -----------PLUGINS------------------{{{
 "
 "-------------PATHOGEN----------------
 execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
-set encoding=utf-8
 
 "-------------AIRLINE-----------------
 set t_Co=256
@@ -86,8 +80,8 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 let mapleader = '-'
 inoremap jk <Esc>
-nnoremap <leader>sv :vsplit $MYVIMRC<cr>
-nnoremap <leader>sh :split $MYVIMRC<cr>
+nnoremap <leader>sv :vsplit .<cr>
+noremap <leader>sh :split .<cr>
 nnoremap <leader>sr :source $MYVIMRC<cr>
 set clipboard=unnamed
 "}}}
@@ -96,6 +90,11 @@ set clipboard=unnamed
 "Write txt files on open
 autocmd BufNewFile *.txt :write
 autocmd BufWritePre * %s/\s\+$//e
+
+"Comment out lines using <localleader>c
+autocmd FileType cpp nnoremap <buffer> <localleader>c I//<esc>
+autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+
 "}}}
 
 "-----------VIMSCRIPT FILE SETTINGS --------------------{{{
@@ -117,11 +116,25 @@ nnoremap <Right> <Nop>
 nnoremap <Down> <Nop>
 nnoremap <Up> <Nop>
 nnoremap <q> <Nop>
-inoremap <q> <Nop>
 "}}}
 
 " -----------CUSTOM PREFS-----------------{{{
+syntax on
+filetype plugin indent on
+set encoding=utf-8
 colo vimbrant
+set nocompatible
+set number
+set nowrap
+set showmode
+set tw=80
+set smartcase
+set smarttab
+set smartindent
+set autoindent
+set wildignore+=*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
+set wildmode=longest,list,full
+" :<Tab> will be useful now
 set wildmenu
 
 " Give me sane tabs
@@ -138,3 +151,47 @@ set foldmethod=manual
 set scrolloff=90
 "}}}
 
+" -----------HASKELL-----------------{{{
+"
+"------------Syntastic-----------------
+"
+map <Leader>s :SyntasticToggleMode<CR>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+"
+"-----------GHC-MOD--------------------
+"
+"map <silent> tw :GhcModTypeInsert<CR>
+"map <silent> ts :GhcModSplitFunCase<CR>
+"map <silent> tq :GhcModType<CR>
+"map <silent> te :GhcModTypeClear<CR>
+"
+"-----------SuperTab---------------------
+"
+let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+
+if has("gui_running")
+  imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+else " no gui
+  if has("unix")
+    inoremap <Nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+  endif
+endif
+
+let g:haskellmode_completion_ghc = 1
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+"
+"------------CTRL-P-------------------------
+"
+map <silent> <Leader>t :CtrlP()<CR>
+noremap <leader>b<space> :CtrlPBuffer<cr>
+let g:ctrlp_custom_ignore = '\v[\/]dist$'
+"
+"}}}
