@@ -28,8 +28,25 @@ echo Vim Ruhbarb
 git clone https://github.com/tpope/vim-rhubarb.git
 echo Syntastic
 git clone https://github.com/scrooloose/syntastic.git
-echo NeoComplete
-https://github.com/Shougo/neocomplete.vim.git
+echo SuperTab
+git clone https://github.com/ervandew/supertab.git
+echo Deoplete - AutoComplete plugin
+https://github.com/Shougo/deoplete.nvim.git
+echo Haskell Stuff
+echo Ghc-Mod-Vim
+git clone https://github.com/eagletmt/ghcmod-vim.git
+echo Neco-Ghc
+git clone https://github.com/eagletmt/neco-ghc
+echo Crtl-P
+git clone https://github.com/ctrlpvim/ctrlp.vim.git
+echo Utility Plugins
+git clone https://github.com/tomtom/tlib_vim.git
+git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
+git clone https://github.com/roxma/nvim-yarp.git
+git clone https://github.com/roxma/vim-hug-neovim-rpc.git
+git clone https://github.com/Shougo/vimproc.vim.git
+cd vimproc.vim
+make
 cd ~
 echo Installing Powerline Fonts
 git clone https://github.com/powerline/fonts.git
