@@ -28,8 +28,6 @@ echo Vim Ruhbarb
 git clone https://github.com/tpope/vim-rhubarb.git
 echo Syntastic
 git clone https://github.com/scrooloose/syntastic.git
-echo SuperTab
-git clone https://github.com/godlygeek/tabular.git
 echo NeoComplete
 https://github.com/Shougo/neocomplete.vim.git
 cd ~
