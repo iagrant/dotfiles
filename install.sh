@@ -26,16 +26,12 @@ echo Vim Fugitive
 git clone https://github.com/tpope/vim-fugitive.git
 echo Vim Ruhbarb
 git clone https://github.com/tpope/vim-rhubarb.git
-echo YouCompleteMe
-git clone https://github.com/Valloric/YouCompleteMe.git
-cd ~/.vim/bundle/YouCompleteMe
-git submodule update --init --recursive
-./instal.py --clang-completer
-#EXTRA YCM STUFF
-#only use if want extra c stuff
-#mkdir ycm_build
-#cd ycm_build
-#cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+echo Syntastic
+git clone https://github.com/scrooloose/syntastic.git
+echo SuperTab
+git clone https://github.com/godlygeek/tabular.git
+echo NeoComplete
+https://github.com/Shougo/neocomplete.vim.git
 cd ~
 echo Installing Powerline Fonts
 git clone https://github.com/powerline/fonts.git
