@@ -21,25 +21,25 @@ echo Tmuxline
 git clone https://github.com/edkolev/tmuxline.vim.git
 echo Vim Bufferline
 git clone https://github.com/bling/vim-bufferline.git
-echo Git Gutter
-git clone https://github.com/airblade/vim-gitgutter.git
 echo NeoMake
 git clone https://github.com/neomake/neomake.git
-echo SuperTab
-git clone https://github.com/ervandew/supertab.git
-echo Deoplete - AutoComplete plugin
-https://github.com/Shougo/deoplete.nvim.git
 echo Neco-Ghc
 git clone https://github.com/eagletmt/neco-ghc
 echo Crtl-P
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
-echo Grepper
-git clone https://github.com/mhinz/vim-grepper.git
 echo Haskell-Vim
 https://github.com/neovimhaskell/haskell-vim.git
 echo Intero-NeoVim
 https://github.com/parsonsmatt/intero-neovim.git
-
+echo Vim-Fugitive
+git clone https://github.com/tpope/vim-fugitive.git
+echo Vim-Rhubarb
+git clone https://github.com/tpope/vim-rhubarb.git
+echo YouCompleteMe
+git clone https://github.com/Valloric/YouCompleteMe.git
+cd YouCompleteMe
+git submodule update --init --recursive
+./install.py
 echo Installing Powerline Fonts
 git clone https://github.com/powerline/fonts.git
 cd fonts
