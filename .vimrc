@@ -8,7 +8,7 @@
 "
 "-------------PATHOGEN----------------
 execute pathogen#infect()
-
+let g:deoplete#enable_at_startup = 1
 "-------------AIRLINE-----------------
 set t_Co=256
 set laststatus=2
@@ -151,9 +151,7 @@ set foldmethod=manual
 set scrolloff=90
 "}}}
 
-" -----------HASKELL-----------------{{{
-"
-"------------Syntastic-----------------
+"------------Syntastic----------------{{{
 "
 map <Leader>s :SyntasticToggleMode<CR>
 
@@ -165,33 +163,30 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-"
-"-----------GHC-MOD--------------------
-"
-"map <silent> tw :GhcModTypeInsert<CR>
-"map <silent> ts :GhcModSplitFunCase<CR>
-"map <silent> tq :GhcModType<CR>
-"map <silent> te :GhcModTypeClear<CR>
-"
-"-----------SuperTab---------------------
-"
-let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+"}}}
 
-if has("gui_running")
-  imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
-else " no gui
-  if has("unix")
-    inoremap <Nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
-  endif
-endif
-
+"-----------Haskell-----------{{{
+"-----------GHC-MOD-----------
+"
+map <silent> tw :GhcModTypeInsert<CR>
+map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> tq :GhcModType<CR>
+map <silent> te :GhcModTypeClear<CR>
+"
+"----------Haskell Autocomplete-----
+"
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
+let g:necoghc_use_stack = 1
 let g:haskellmode_completion_ghc = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 "
-"------------CTRL-P-------------------------
+"}}}
+
+"-----------CRTL-P-----------{{{
 "
 map <silent> <Leader>t :CtrlP()<CR>
 noremap <leader>b<space> :CtrlPBuffer<cr>
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
+"}}}
 "
 "}}}
