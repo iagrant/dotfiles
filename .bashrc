@@ -66,7 +66,7 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1='\u@\h \w \$ '
 fi
-
+unset color_prompt force_color_prompt
 #unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -83,8 +83,6 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -94,6 +92,9 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias ghc='stack ghc'
+alias ghci='stack ghci'
+alias vim='nvim'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -140,20 +141,18 @@ colors() {
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
-#AUTOJUMP
+#RANDOM SCRIPTS & STUFF
+export PATH=$HOME/.local/bin:$PATH
+#AUTOJUMP!
 source /etc/profile.d/autojump.bash
-#PRETTY COLORS
+#PRETTY COLORS :D
 export TERM=xterm-256color
 #SYMBOLIC LINKS TO DIRS
 export CDPATH=~/symlinks
-#REPLACE NANO WITH VIM WHEN NEEDED
+#REPLACE NANO WITH VIM CUZ VIM!
 export VISUAL=vim
 export EDITOR="$VISUAL"
-#OCAML STUFF
-export OCAMLPARAM="_,I=$OPAMROOT/system/lib/toplevel"
-eval 'opam config env'
 #BEAUTIFUL POWERLINE SEXYNESS
 #FIGURE OUT WHILE IF ABOVE DOESN'T WORK
 PS1=$'\[\e[30;1;102m\]\xee\x82\xb0\[\e[30;1;102m\] \u \[\e[32;1;40m\]\xee\x82\xb0\[\e[30;1;107m\]\xee\x82\xb0\[\e[30;1;107m\] \W \[\e[97;1;49m\]\xee\x82\xb0\e[0m '
-unset color_prompt force_color_prompt
 clear
