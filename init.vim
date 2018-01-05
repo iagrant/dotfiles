@@ -71,9 +71,8 @@ set clipboard=unnamed
 
 "-----------Auto Commands---------------{{{
 autocmd BufWritePre * %s/\s\+$//e
-"}}}
 
-"-----------vimrc folds-----------{{{
+"-----------vimrc folds-----------
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
@@ -98,10 +97,6 @@ nnoremap <q> <Nop>
 "
 "-------------PATHOGEN----------------
 execute pathogen#infect()
-"-------------Deoplete-------------
-let g:deoplete#enable_at_startup = 1
-"-------------SuperTab-------------
-let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 "-------------Custom Prefs-------------
 
 syntax on
@@ -166,68 +161,13 @@ let g:cabal_indent_section = 2
 " Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
 
-" neco-ghc
+" -----------neco-ghc-----------
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let g:necoghc_enable_detailed_browse = 1
-"}}}
-
-"-----------Intero-----------{{{
-augroup interoMaps
-  au!
-  " Maps for intero. Restrict to Haskell buffers so the bindings don't collide.
-
-  " Background process and window management
-  au FileType haskell nnoremap <silent> <leader>is :InteroStart<CR>
-  au FileType haskell nnoremap <silent> <leader>ik :InteroKill<CR>
-
-  " Open intero/GHCi split horizontally
-  au FileType haskell nnoremap <silent> <leader>io :InteroOpen<CR>
-  " Open intero/GHCi split vertically
-  au FileType haskell nnoremap <silent> <leader>iov :InteroOpen<CR><C-W>H
-  au FileType haskell nnoremap <silent> <leader>ih :InteroHide<CR>
-
-  " Reloading (pick one)
-  " Automatically reload on save
-  au BufWritePost *.hs InteroReload
-  " Manually save and reload
-  au FileType haskell nnoremap <silent> <leader>wr :w \| :InteroReload<CR>
-
-  " Load individual modules
-  au FileType haskell nnoremap <silent> <leader>il :InteroLoadCurrentModule<CR>
-  au FileType haskell nnoremap <silent> <leader>if :InteroLoadCurrentFile<CR>
-
-  " Type-related information
-  " Heads up! These next two differ from the rest.
-  au FileType haskell map <silent> <leader>t <Plug>InteroGenericType
-  au FileType haskell map <silent> <leader>T <Plug>InteroType
-  au FileType haskell nnoremap <silent> <leader>it :InteroTypeInsert<CR>
-
-  " Navigation
-  au FileType haskell nnoremap <silent> <leader>jd :InteroGoToDef<CR>
-
-  " Managing targets
-  " Prompts you to enter targets (no silent):
-  au FileType haskell nnoremap <leader>ist :InteroSetTargets<SPACE>
-augroup END
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 "-----------NeoMake-----------
 call neomake#configure#automake('w')
-"Uses Intero only for syntax checks and not neomake
-let g:neomake_haskell_enabled_makers = []
-
-"}}}
-
-"-----------GitGutter-------------{{{
-let g:gitgutter_max_signs = 250
-"}}}
-
-" -----------Grepper-----------{{{
-"nnoremap <leader>g :Grepper -tool ack<cr>
-"}}}
-
-" -----------CRTL-P-----------{{{
 "
-map <silent> <Leader>t :CtrlP()<CR>
-noremap <leader>b<space> :CtrlPBuffer<cr>
-let g:ctrlp_custom_ignore = '\v[\/]dist$'
 "}}}
+
