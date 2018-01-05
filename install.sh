@@ -29,8 +29,8 @@ echo Crtl-P
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
 echo Haskell-Vim
 https://github.com/neovimhaskell/haskell-vim.git
-echo Intero-NeoVim
-https://github.com/parsonsmatt/intero-neovim.git
+#echo Intero-NeoVim
+#https://github.com/parsonsmatt/intero-neovim.git
 echo Vim-Fugitive
 git clone https://github.com/tpope/vim-fugitive.git
 echo Vim-Rhubarb
