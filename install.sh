@@ -29,13 +29,11 @@ echo Haskell-Vim
 https://github.com/neovimhaskell/haskell-vim.git
 echo Ghc-Mod
 git clone https://github.com/eagletmt/ghcmod-vim.git
-#echo Intero-NeoVim
-#https://github.com/parsonsmatt/intero-neovim.git
 echo Vim-Fugitive
 git clone https://github.com/tpope/vim-fugitive.git
 echo Vim-Rhubarb
 git clone https://github.com/tpope/vim-rhubarb.git
-echo Vim-Proc
+echo Vim-Proc # Needed by Ghc-mod
 git clone https://github.com/Shougo/vimproc.vim.git
 cd vimproc.vim
 make
