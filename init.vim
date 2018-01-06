@@ -103,6 +103,7 @@ syntax on
 filetype plugin indent on
 set nocompatible
 
+colo obsidian
 "Number lines with relative numbers
 set number
 set relativenumber
@@ -133,15 +134,14 @@ set scrolloff=90
 
 "WildMenu
 set wildmenu
-set wildmode=longest,list,full
+"set wildmode=longest,list,full
 set wildignore+=*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
 
-colo vimbrant
-hi Keyword ctermfg=darkcyan
-hi Constant ctermfg=5*
-hi Comment ctermfg=2*
-hi Normal ctermbg=none
-hi LineNr ctermfg=darkgrey
+"hi Keyword ctermfg=darkcyan
+"hi Constant ctermfg=5*
+"hi Comment ctermfg=2*
+"hi Normal ctermbg=none
+"hi LineNr ctermfg=darkgrey
 "}}}
 
 "-----------Haskell-----------{{{
@@ -168,6 +168,11 @@ let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 "-----------NeoMake-----------
 call neomake#configure#automake('w')
-"
+
+"-----------Ghc-Mod-----------
+map <silent> tw :GhcModTypeInsert<CR>
+map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> tq :GhcModType<CR>
+map <silent> te :GhcModTypeClear<CR>
 "}}}
 
