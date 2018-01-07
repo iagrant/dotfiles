@@ -377,7 +377,7 @@ bar {
     }
 }
 
-# hide/unhide i3status bar
+# hide/unhide status bar
 bindsym $mod+m bar mode toggle
 
 # Theme colors
