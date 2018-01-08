@@ -5,6 +5,14 @@ echo .bashrc
 mv .bashrc ~/.bashrc
 echo .tmux.conf
 mv .tmux.conf ~/.tmux.conf
+echo Ghci
+mv .ghci ~/.ghci
+echo Gitconfig
+mv .gitconfig ~/.gitconfig
+echo i3
+mv -rp .i3/* ~/.i3/
+echo polybar
+mv -rp .config/polybar/* ~/.config/polybar/
 echo Making Vim Plugin Directory
 mkdir -p ~/.config/nvim/autoload ~/.config/nvim/bundle && \
 curl -LSso ~/.config/nvim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
