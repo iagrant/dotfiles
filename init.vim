@@ -63,6 +63,7 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 let mapleader = '-'
 inoremap jk <Esc>
+inoremap <Caps> <Esc>
 nnoremap <leader>sv :vsplit .<cr>
 noremap <leader>sh :split .<cr>
 nnoremap <leader>sr :source $MYVIMRC<cr>
