@@ -1,10 +1,18 @@
 echo Exporting packages
 echo init.vim coppied over
-mv init.vim ~/.config/nvim
+mv .config/nvim/* ~/.config/nvim
 echo .bashrc
 mv .bashrc ~/.bashrc
 echo .tmux.conf
 mv .tmux.conf ~/.tmux.conf
+echo Ghci
+mv .ghci ~/.ghci
+echo Gitconfig
+mv .gitconfig ~/.gitconfig
+echo i3
+mv .i3/* ~/.i3/
+echo polybar
+mv .config/polybar/* ~/.config/polybar/
 echo Making Vim Plugin Directory
 mkdir -p ~/.config/nvim/autoload ~/.config/nvim/bundle && \
 curl -LSso ~/.config/nvim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
