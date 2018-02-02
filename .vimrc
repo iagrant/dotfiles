@@ -1,14 +1,13 @@
 " -----------VIM HEADER-----------{{{
 "
-" *Please use with cation this setup can lead to insanity.
-" --Ian Grant
+" Please use with cation this setup will lead to insanity
+" <3
 " }}}
 
 " -----------PLUGINS------------------{{{
 "
 "-------------PATHOGEN----------------
 execute pathogen#infect()
-let g:deoplete#enable_at_startup = 1
 "-------------AIRLINE-----------------
 set t_Co=256
 set laststatus=2
@@ -58,12 +57,12 @@ let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 1
 
 " -------------MULTI CURSORS--------------
-let g:multi_cursor_use_default_mapping=0
+"let g:multi_cursor_use_default_mapping=0
 " Default Mapping
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
+"let g:multi_cursor_next_key='<C-n>'
+"let g:multi_cursor_prev_key='<C-p>'
+"let g:multi_cursor_skip_key='<C-x>'
+"let g:multi_cursor_quit_key='<Esc>'
 
 " -------------CPP HIGHLIGHTING--------------
 let g:cpp_class_scope_highlight = 1
@@ -92,13 +91,18 @@ autocmd BufNewFile *.txt :write
 autocmd BufWritePre * %s/\s\+$//e
 
 "Comment out lines using <localleader>c
-autocmd FileType cpp nnoremap <buffer> <localleader>c I//<esc>
-autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+"autocmd FileType cpp nnoremap <buffer> <localleader>c I//<esc>
+"autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
 
 "}}}
 
-"-----------VIMSCRIPT FILE SETTINGS --------------------{{{
+"-----------VIM&i3 FILE SETTINGS --------------------{{{
 augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+augroup filetype_i3
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
@@ -182,11 +186,3 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 "
 "}}}
 
-"-----------CRTL-P-----------{{{
-"
-map <silent> <Leader>t :CtrlP()<CR>
-noremap <leader>b<space> :CtrlPBuffer<cr>
-let g:ctrlp_custom_ignore = '\v[\/]dist$'
-"}}}
-"
-"}}}
