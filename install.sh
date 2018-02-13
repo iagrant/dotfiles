@@ -10,7 +10,7 @@ mv .ghci ~/.ghci
 echo Gitconfig
 mv .gitconfig ~/.gitconfig
 echo i3
-mv .i3/* ~/.i3/
+mv .i3/* ~/.config/i3/
 echo polybar
 mv .config/polybar/* ~/.config/polybar/
 echo Making Vim Plugin Directory
