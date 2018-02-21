@@ -126,10 +126,14 @@ nnoremap <q> <Nop>
 syntax on
 filetype plugin indent on
 set encoding=utf-8
-colo vimbrant
+colo obsidian
 set nocompatible
-set number
 set nowrap
+set textwidth=0
+set wrapmargin=0
+set wrap!
+set formatoptions-=t
+set number
 set showmode
 set tw=80
 set smartcase
