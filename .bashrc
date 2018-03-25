@@ -92,8 +92,8 @@ fi
 #alias ll='ls -alF'
 #alias la='ls -A'
 #alias l='ls -CF'
-alias ghc='stack ghc'
-alias ghci='stack ghci'
+#alias ghc='stack ghc'
+#alias ghci='stack ghci'
 alias play='playerctl play'
 alias pause='playerctl pause'
 
@@ -148,8 +148,6 @@ export PATH=$HOME/.local/bin:$PATH
 source /etc/profile.d/autojump.bash
 #PRETTY COLORS :D
 export TERM=xterm-256color
-#SYMBOLIC LINKS TO DIRS
-export CDPATH=~/symlinks
 #REPLACE NANO WITH VIM CUZ VIM!
 export VISUAL=vim
 export EDITOR="$VISUAL"

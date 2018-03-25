@@ -155,34 +155,3 @@ set foldmethod=manual
 set scrolloff=90
 "}}}
 
-"------------Syntastic----------------{{{
-"
-map <Leader>s :SyntasticToggleMode<CR>
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-"}}}
-
-"-----------Haskell-----------{{{
-"-----------GHC-MOD-----------
-"
-map <silent> tw :GhcModTypeInsert<CR>
-map <silent> ts :GhcModSplitFunCase<CR>
-map <silent> tq :GhcModType<CR>
-map <silent> te :GhcModTypeClear<CR>
-"
-"----------Haskell Autocomplete-----
-"
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
-let g:necoghc_use_stack = 1
-let g:haskellmode_completion_ghc = 1
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-"
-"}}}
-
