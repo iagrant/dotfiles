@@ -7,7 +7,6 @@
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
-
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -36,6 +35,14 @@ esac
 # should be on the output of commands, not on the prompt
 color_prompt=yes
 force_color_prompt=yes
+GREEN_BG='\[\033[48;5;40m\]'
+GREEN_FG='\[\033[38;5;40m\]'
+WHITE_BG='\[\033[48;5;254m\]'
+WHITE_FG='\[\033[38;5;254m\]'
+BLACK_BG='\[\033[48;5;0m\]'
+BLACK_FG='\[\033[38;5;232m\]'
+ARROW_SYM=''
+REG='\e[0m'
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -56,7 +63,7 @@ if [ "$color_prompt" = yes ]; then
         #
         # MAGIC LINE FOR POWER LINE TERMINAL GOODNESS
         #
-        PS1=$'\[\e[255;1;104m\] \u \[\e[94;1;40m\]\xee\x82\xb0\[\e[30;2;107m\]\xee\x82\xb0\[\e[30;2;107m\] \w \[\e[97;2;49m\]\xee\x82\xb0\e[0m '
+        PS1=$"${BLACK_FG}${GREEN_BG}${ARROW_SYM} \u ${REG}${GREEN_FG}${ARROW_SYM}${WHITE_BG}${BLACK_FG}${ARROW_SYM}${WHITE_BG} \W ${REG}${WHITE_FG}${ARROW_SYM}${REG} "
         #
         #
         #
@@ -66,7 +73,7 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1='\u@\h \w \$ '
 fi
-unset color_prompt force_color_prompt
+unset color_prompt force_color_prompt GREEN_BG GREEN_FG WHITE_BG WHITE_FG BLACK_FG BLACK_BG REG ARROW_SYM
 #unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -153,5 +160,4 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 #BEAUTIFUL POWERLINE SEXYNESS
 #FIGURE OUT WHILE IF ABOVE DOESN'T WORK
-PS1=$'\[\e[30;1;102m\]\xee\x82\xb0\[\e[30;1;102m\] \u \[\e[32;1;40m\]\xee\x82\xb0\[\e[30;1;107m\]\xee\x82\xb0\[\e[30;1;107m\] \W \[\e[97;1;49m\]\xee\x82\xb0\e[0m '
 clear
