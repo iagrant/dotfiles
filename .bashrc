@@ -66,25 +66,11 @@ if [ "$color_prompt" = yes ]; then
         PS1=$"${BLACK_FG}${GREEN_BG}${ARROW_SYM} \u ${REG}${GREEN_FG}${ARROW_SYM}${WHITE_BG}${BLACK_FG}${ARROW_SYM}${WHITE_BG} \W ${REG}${WHITE_FG}${ARROW_SYM}${REG} "
         #
         #
-        #
-        #
-
     fi
 else
     PS1='\u@\h \w \$ '
 fi
 unset color_prompt force_color_prompt GREEN_BG GREEN_FG WHITE_BG WHITE_FG BLACK_FG BLACK_BG REG ARROW_SYM
-#unset color_prompt force_color_prompt
-
-# If this is an xterm set the title to user@host:dir
-#PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h \w\a\]$PS1"
-case ${TERM} in
-  xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
-      PS1="\[\e]0;\u@\h \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -103,6 +89,7 @@ fi
 #alias ghci='stack ghci'
 alias play='playerctl play'
 alias pause='playerctl pause'
+alias pingg='ping 8.8.8.8'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
