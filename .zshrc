@@ -29,26 +29,27 @@ zle -N zle-keymap-select
 
 #POWERLEVEL9K_VI_INSERT_MODE_STRING="\ue285"
 #POWERLEVEL9K_VI_COMMAND_MODE_STRING="\ue20c"
-#
-#prompt_zsh_showStatus () {
-#  state=`spotify-cli now-playing`;
-#  if [ $state = "Spotify service not found - is it running?" ]; then
-#
-#  else
-#    artist=`spotify-cli now-playing | grep "spotify_artist_name" | cut -d'=' -f2`
-#    track=`spotify-cli now-playing | grep "spotify_track_name" | cut -d'=' -f2`
-#
-#    echo -n "$artist - $track";
-#  fi
-#}
+
+prompt_spotify () {
+  state=`spotifycli --status`;
+  if [ $state = "spotify is off" ]; then
+
+  else
+    artist=`spotifycli --status | cut -d'-' -f1`
+    track=`spotifycli --status | cut -d'-' -f2`
+
+    echo -n "$artist - $track ";
+  fi
+}
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs virtualenv)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs_joined vi_mode time)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs_joined vi_mode time)
-POWERLEVEL9K_CONTEXT_TEMPLATE="%n"
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status spotify background_jobs_joined vi_mode time)
+POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=4
-#DEFAULT_USER='dialect'
+DEFAULT_USER='dialect'
+POWERLEVEL9K_CONTEXT_TEMPLATE="%n"
+
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND=232
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND=40
 
