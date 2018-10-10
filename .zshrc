@@ -1,3 +1,4 @@
+source /usr/share/autojump/autojump.zsh
 source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle history
@@ -8,7 +9,7 @@ antigen bundle heroku
 antigen bundle lein
 antigen bundle virtualenv
 antigen bundle pip
-antigen theme robbyrussell
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 antigen apply
 
 # Lines configured by zsh-newuser-install
@@ -17,6 +18,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 EDITOR="nvim"
 alias vim='nvim'
+alias msfconsole="msfconsole --quiet -x \"db_connect ${USER}@msf\""
+alias openvpnHTB="sudo openvpn ~/.openvpnConfs/Dialect.ovpn"
 setopt extendedglob
 setopt interactivecomments
 unsetopt beep
