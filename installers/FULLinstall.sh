@@ -1,13 +1,4 @@
-echo Exporting packages
-echo Ghci
-cp .ghci ~/.ghci
-echo Gitconfig
-cp .gitconfig ~/.gitconfig
-echo i3
-cp .i3/* ~/.config/i3/
-echo polybar
-cp .config/polybar/* ~/.config/polybar/
-echo Installing Vim Custom
+echo Installing Custom NeoVim
 ./vimInstall.sh
 echo Installing Custom Zsh
 ./zshInstall.sh
@@ -17,4 +8,4 @@ cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
-
+echo All Done! Enjoy! :D
