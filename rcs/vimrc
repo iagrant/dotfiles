@@ -1,8 +1,14 @@
 " -----------VIM HEADER-----------{{{
 "
 " Please use with cation this setup will lead to insanity
-" <3
+" <3 - Ian
 " }}}
+"
+
+" -----------VIM HEADER-----------{{{
+call plug#begin()
+call plug#end()
+"}}}
 
 "-------------AIRLINE-----------------{{{
 set t_Co=256
@@ -87,8 +93,6 @@ augroup END
 "-----------DISABLED KEYS----------------{{{
 inoremap <BS> <Nop>
 nnoremap <BS> <Nop>
-inoremap <Enter> <Nop>
-nnoremap <Enter> <Nop>
 inoremap <Del> <Nop>
 nnoremap <Del> <Nop>
 inoremap <Up> <Nop>
