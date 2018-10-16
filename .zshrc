@@ -1,3 +1,4 @@
+source /usr/share/autojump/autojump.zsh
 source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle history
@@ -8,10 +9,9 @@ antigen bundle heroku
 antigen bundle lein
 antigen bundle virtualenv
 antigen bundle pip
-antigen theme robbyrussell
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 antigen apply
 
-# Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
