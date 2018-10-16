@@ -15,10 +15,10 @@ antigen apply
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-EDITOR="nvim"
 alias vim='nvim'
+EDITOR="nvim"
 alias msfconsole="msfconsole --quiet -x \"db_connect ${USER}@msf\""
-alias openvpnH="sudo openvpn ~/.openvpnConfs/Dialect.ovpn"
+alias openvpnHTB="sudo openvpn ~/.openvpnConfs/Dialect.ovpn"
 setopt extendedglob
 setopt interactivecomments
 unsetopt beep
